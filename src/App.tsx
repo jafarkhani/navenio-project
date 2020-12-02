@@ -3,7 +3,7 @@ import CharacterSearch from './components/CharacterSearch/CharacterSearch';
 import CharacterInfo from "./components/CharacterInfo/CharacterInfo";
 import {People} from './models/People';
 
-const App = () => {
+const App:React.FC = () => {
 
   const [selectedRecord, SetselectedRecord] = useState<People>({
     name : "",

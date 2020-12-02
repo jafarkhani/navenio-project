@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import _ from 'underscore';
+
 import './CharacterInfo.scss';
 import Loading from '../loading/Loading';
-import { People } from '../../models/People';
+import displayFeatures , { People } from '../../models/People';
 
 interface Props{
     data : People
@@ -15,6 +16,7 @@ const CharacterInfo : React.FC<Props> = ({data}) => {
     useEffect(() => {
         setLoading(true);
 
+        // show loading for new data
         setTimeout(() => {
             setLoading(false);
         }, 300);
@@ -22,18 +24,11 @@ const CharacterInfo : React.FC<Props> = ({data}) => {
 
     }, [data])
 
-    const features = [
-        {field : "gender", title : "Gender"},
-        {field : "birth_year", title : "Birth Year"},
-        {field : "height", title : "Height"},
-        {field : "mass", title : "Mass"},
-        {field : "hair_color", title : "Hair Color"}        
-    ];
-
     if(_.isEmpty(data))
         return (null);
 
-    let rows = features.map(item => {
+    // create table rows of display features
+    let rows = displayFeatures.map(item => {
         if(data[item.field as keyof People]){
             return (
                 <tr key={item.field}>
