@@ -1,4 +1,4 @@
-import { act, cleanup, render, waitFor } from '@testing-library/react';
+import { cleanup, render, waitFor } from '@testing-library/react';
 import { shallow } from 'enzyme';
 import React from 'react';
 import CharacterInfo from './CharacterInfo';
