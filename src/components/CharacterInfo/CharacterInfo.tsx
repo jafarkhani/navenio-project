@@ -24,7 +24,7 @@ const CharacterInfo : React.FC<Props> = ({data}) => {
 
     }, [data])
 
-    if(_.isEmpty(data))
+    if(data.name === "")
         return (null);
 
     // create table rows of display features
