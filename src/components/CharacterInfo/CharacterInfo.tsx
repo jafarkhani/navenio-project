@@ -3,7 +3,7 @@ import _ from 'underscore';
 
 import './CharacterInfo.scss';
 import Loading from '../loading/Loading';
-import displayFeatures , { People } from '../../models/People';
+import {displayFeatures, People } from '../../models/People';
 
 interface Props{
     data : People

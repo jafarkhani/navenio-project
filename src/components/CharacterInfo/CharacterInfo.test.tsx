@@ -2,7 +2,7 @@ import { cleanup, render, waitFor } from '@testing-library/react';
 import { shallow } from 'enzyme';
 import React from 'react';
 import CharacterInfo from './CharacterInfo';
-
+import {displayFeatures, People } from '../../models/People';
 
 describe("characterInfo component tests", ()=>{
 
@@ -35,14 +35,21 @@ describe("characterInfo component tests", ()=>{
     });
 
     it("load data correctly", async () => {
-    
         const {getByTestId} = render(<CharacterInfo {...props} />);
         await waitFor(() => getByTestId("table-character-info"));
-        expect(getByTestId("info-gender").textContent).toEqual(props.data.gender);
-        expect(getByTestId("info-birth_year").textContent).toEqual(props.data.birth_year);
-        expect(getByTestId("info-height").textContent).toEqual(props.data.height);
-        expect(getByTestId("info-mass").textContent).toEqual(props.data.mass);
-        expect(getByTestId("info-hair_color").textContent).toEqual(props.data.hair_color);
-        
+        displayFeatures.forEach(f => {
+            expect(getByTestId("info-" + f.field).textContent).toEqual(props.data[f.field as keyof People]);
+        });        
       });
+
+    it("don't show missing feature in data", async ()=>{
+        const props = {
+            data: {
+                name: "Luke Skywalker"                
+            }
+        }
+        const {queryByTestId } = render(<CharacterInfo {...props} />);
+        await waitFor(() => queryByTestId ("table-character-info"));
+        expect(queryByTestId ("info-gender")).toBeNull();        
+    })
 })

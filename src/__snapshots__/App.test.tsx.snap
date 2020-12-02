@@ -128,29 +128,6 @@ exports[`App component tests snapshop App 1`] = `
         </div>
       </div>
     </div>
-    <div
-      className="ml-3 mr-3 mb-3"
-    >
-      <table
-        className="table character-info-table"
-        data-testid="table-character-info"
-      >
-        <thead
-          className="bg-light"
-        >
-          <tr>
-            <td
-              colSpan={2}
-            >
-              <b>
-                
-              </b>
-            </td>
-          </tr>
-        </thead>
-        <tbody />
-      </table>
-    </div>
   </div>
 </div>
 `;

@@ -9,6 +9,7 @@ import {People} from '../../models/People';
 interface Props{
     onSelectCharacter : React.Dispatch<React.SetStateAction<People>>;
 }
+
 const CharacterSearch: React.FC<Props> = (props) =>{
 
     const LoadCharacters = async (
