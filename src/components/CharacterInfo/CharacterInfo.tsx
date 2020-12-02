@@ -27,8 +27,7 @@ const CharacterInfo : React.FC<Props> = ({data}) => {
         {field : "birth_year", title : "Birth Year"},
         {field : "height", title : "Height"},
         {field : "mass", title : "Mass"},
-        {field : "hair_color", title : "Hair Color"},
-        {field : "xxxx", title : "Hair Color"}
+        {field : "hair_color", title : "Hair Color"}        
     ];
 
     if(_.isEmpty(data))
@@ -39,7 +38,7 @@ const CharacterInfo : React.FC<Props> = ({data}) => {
             return (
                 <tr key={item.field}>
                     <td>{item.title}</td>
-                    <td>{data[item.field as keyof People]}</td>
+                    <td data-testid={`info-${item.field}`}>{data[item.field as keyof People]}</td>
                 </tr> 
             );
         }
@@ -52,7 +51,7 @@ const CharacterInfo : React.FC<Props> = ({data}) => {
     return (
 
         <div className="ml-3 mr-3 mb-3">
-            <table className="table character-info-table">
+            <table data-testid="table-character-info" className="table character-info-table">
                 <thead className="bg-light">
                     <tr>
                         <td colSpan={2} ><b>{data.name}</b></td>

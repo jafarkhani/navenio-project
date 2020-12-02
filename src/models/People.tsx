@@ -2,8 +2,8 @@ export interface People{
   name : string;
   gender: string;
   birth_year: string;
-  height: number;
-  mass: number;
+  height: string;
+  mass: string;
   hair_color: string;
 };
 

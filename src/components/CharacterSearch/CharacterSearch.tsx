@@ -33,6 +33,7 @@ const CharacterSearch: React.FC<Props> = (props) =>{
                     getOptionValue={e => e.name}
                     loadOptions={LoadCharacters} 
                     className="flex-grow-1"
+                    classNamePrefix="character-select"
                     onChange={LoadCharacterInfo}
                 />                
             </div>

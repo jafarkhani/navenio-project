@@ -28,15 +28,15 @@ exports[`App component tests snapshop App 1`] = `
           onKeyDown={[Function]}
         >
           <div
-            className=" css-yk16xz-control"
+            className="character-select__control css-yk16xz-control"
             onMouseDown={[Function]}
             onTouchEnd={[Function]}
           >
             <div
-              className=" css-g1d714-ValueContainer"
+              className="character-select__value-container css-g1d714-ValueContainer"
             >
               <div
-                className=" css-1wa3eu0-placeholder"
+                className="character-select__placeholder css-1wa3eu0-placeholder"
               >
                 Select...
               </div>
@@ -44,7 +44,7 @@ exports[`App component tests snapshop App 1`] = `
                 className="css-b8ldur-Input"
               >
                 <div
-                  className=""
+                  className="character-select__input"
                   style={
                     Object {
                       "display": "inline-block",
@@ -99,14 +99,14 @@ exports[`App component tests snapshop App 1`] = `
               </div>
             </div>
             <div
-              className=" css-1hb7zxy-IndicatorsContainer"
+              className="character-select__indicators css-1hb7zxy-IndicatorsContainer"
             >
               <span
-                className=" css-1okebmr-indicatorSeparator"
+                className="character-select__indicator-separator css-1okebmr-indicatorSeparator"
               />
               <div
                 aria-hidden="true"
-                className=" css-tlfecz-indicatorContainer"
+                className="character-select__indicator character-select__dropdown-indicator css-tlfecz-indicatorContainer"
                 onMouseDown={[Function]}
                 onTouchEnd={[Function]}
               >
@@ -133,6 +133,7 @@ exports[`App component tests snapshop App 1`] = `
     >
       <table
         className="table character-info-table"
+        data-testid="table-character-info"
       >
         <thead
           className="bg-light"
