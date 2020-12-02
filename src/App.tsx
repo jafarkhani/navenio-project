@@ -9,8 +9,8 @@ const App = () => {
     name : "",
     gender: "",
     birth_year: "",
-    height: 0,
-    mass: 0,
+    height: "",
+    mass: "",
     hair_color: ""
   });
 
