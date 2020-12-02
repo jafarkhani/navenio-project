@@ -14,7 +14,7 @@ describe("App component tests", ()=>{
     wrapper = shallow(<App />)
   })
 
-  afterEach(cleanup);
+  afterEach(cleanup); 
 
   it("renders without crashing", () => {
       expect(wrapper.length).toBe(1)
