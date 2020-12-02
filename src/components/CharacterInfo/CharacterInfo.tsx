@@ -32,7 +32,7 @@ const CharacterInfo : React.FC<Props> = ({data}) => {
     ];
 
     if(_.isEmpty(data))
-        return (<div></div>);
+        return (null);
 
     let rows = features.map(item => {
         if(data[item.field as keyof People]){
