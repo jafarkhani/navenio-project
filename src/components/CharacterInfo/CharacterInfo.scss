@@ -1,0 +1,23 @@
+$border : 1px solid rgba(0,0,0,.125);
+
+.character-info-table{
+    border-collapse: collapse;
+    border: $border;
+    border-radius: .25rem;
+}
+
+/*
+.character-info-table thead{
+    border: $border;
+    background-color: #aaa;
+}
+.character-info-table td{
+    border-bottom: $border;
+}
+.character-info-table tr :first-child{
+    border-left: $border;
+}
+.character-info-table tr :last-child{
+    border-right: $border;
+}
+*/
